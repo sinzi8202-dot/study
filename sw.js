@@ -1,0 +1,1 @@
+const CACHE='english-growth-v1';self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./','./우리집_영어성장지도_모바일앱형.html','./manifest.webmanifest']))));self.addEventListener('fetch',e=>{if(new URL(e.request.url).origin===self.location.origin)e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))})
